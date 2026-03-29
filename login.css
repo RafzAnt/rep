@@ -1,0 +1,460 @@
+/* ==================== LOGIN PAGE ==================== */
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    background: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 700px;
+    background: #ffffff;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 0;
+    overflow: hidden;
+}
+
+/* ==================== LEFT PANEL - Login Form ==================== */
+.login-left {
+    flex: 1;
+    background: linear-gradient(135deg, #1a5f7a 0%, #159895 100%);
+    padding: 50px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+
+.system-branding {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.system-branding h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.system-branding .municipality {
+    font-size: 1rem;
+    opacity: 0.9;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.login-form-wrapper {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.welcome-text {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.welcome-text h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.welcome-text p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.5;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.input-wrapper:focus-within {
+    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.input-wrapper i {
+    padding: 0 15px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+}
+
+.input-wrapper input {
+    flex: 1;
+    padding: 14px 15px 14px 0;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.input-wrapper input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.password-field {
+    position: relative;
+}
+
+.toggle-password {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    padding: 0 15px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+    color: white;
+}
+
+/* Form Options */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 0.85rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.remember-me input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #159895;
+    cursor: pointer;
+}
+
+.forgot-password {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Login Button */
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background: #ffffff;
+    color: #1a5f7a;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login-btn:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.login-btn i {
+    font-size: 1.1rem;
+}
+
+/* Login Note */
+.login-note {
+    margin-top: 25px;
+    padding: 15px;
+    background: rgba(255, 243, 205, 0.95);
+    border-radius: 10px;
+    font-size: 0.85rem;
+    color: #856404;
+}
+
+.login-note strong {
+    color: #d4a017;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 5px;
+}
+
+.login-note p {
+    margin: 0;
+    color: #856404;
+    line-height: 1.4;
+}
+
+/* ==================== RIGHT PANEL - User Types ==================== */
+.login-right {
+    flex: 1;
+    background: #ffffff;
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.panel-header h3 {
+    font-size: 0.9rem;
+    color: #1a5f7a;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.panel-header p {
+    font-size: 0.75rem;
+    color: #6c757d;
+    letter-spacing: 1px;
+}
+
+.user-types-section {
+    flex: 1;
+}
+
+.user-types-section > h4 {
+    font-size: 0.8rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.user-types-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.user-type-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    border-radius: 12px;
+    background: #f8f9fa;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.user-type-card:hover {
+    border-color: #1a5f7a;
+    background: #e8f4f8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 95, 122, 0.15);
+}
+
+.user-type-card.active {
+    border-color: #1a5f7a;
+    background: #e8f4f8;
+}
+
+.user-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+/* User Type Card Colors */
+.user-type-card.admin .user-icon { background: #e3f2fd; color: #1976d2; }
+.user-type-card.staff .user-icon { background: #e8f5e9; color: #388e3c; }
+.user-type-card.dept-head .user-icon { background: #fff3e0; color: #f57c00; }
+.user-type-card.budget .user-icon { background: #fce4ec; color: #c2185b; }
+.user-type-card.bac .user-icon { background: #f3e5f5; color: #7b1fa2; }
+.user-type-card.mayor .user-icon { background: #ffebee; color: #d32f2f; }
+.user-type-card.treasurer .user-icon { background: #e0f2f1; color: #00796b; }
+.user-type-card.accounting .user-icon { background: #e8eaf6; color: #303f9f; }
+
+.user-type-info h5 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.user-type-info p {
+    font-size: 0.75rem;
+    color: #6c757d;
+}
+
+/* System Covers */
+.system-covers {
+    margin-top: auto;
+    padding-top: 25px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.system-covers h4 {
+    font-size: 0.75rem;
+    color: #1a5f7a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.covers-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.covers-list span {
+    background: linear-gradient(135deg, #1a5f7a 0%, #159895 100%);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+.covers-list span:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(26, 95, 122, 0.3);
+}
+
+.covers-list span i {
+    font-size: 0.7rem;
+}
+
+/* Alert Styling */
+.alert {
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.alert-danger {
+    background: #f8d7da;
+    color: #721c24;
+    border-left: 4px solid #dc3545;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1024px) {
+    .login-container {
+        flex-direction: column;
+        max-width: 600px;
+        margin: 20px;
+    }
+    
+    .login-left,
+    .login-right {
+        padding: 40px;
+    }
+    
+    .user-types-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .login-left {
+        padding: 30px;
+    }
+    
+    .login-right {
+        padding: 30px;
+    }
+    
+    .login-form-wrapper {
+        padding: 25px;
+    }
+    
+    .user-types-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .covers-list {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .covers-list span {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .system-branding h1 {
+        font-size: 1.3rem;
+    }
+    
+    .welcome-text h2 {
+        font-size: 1.2rem;
+    }
+    
+    .form-options {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+}
